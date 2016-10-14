@@ -364,6 +364,7 @@ Glide.with(mContext) //上下文
 
 
 ![fitcenter.gif](fitcenter.gif)
+![fitcenter1.png](fitcenter1.png)
 
 
 
