@@ -66,11 +66,10 @@
             android:layout_width="300dp"
             android:layout_height="300dp"/>
 
-<!--
         <ImageView
-            android:id="@+id/iv9"
+            android:id="@+id/iv10"
             android:layout_width="300dp"
-            android:layout_height="300dp"/>-->
+            android:layout_height="300dp"/>
 
     </LinearLayout>
 

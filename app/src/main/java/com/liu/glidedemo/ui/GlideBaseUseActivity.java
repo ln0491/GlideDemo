@@ -8,6 +8,8 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.DrawableRequestBuilder;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.Priority;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.liu.glidedemo.R;
 
 import java.io.File;
@@ -26,6 +28,8 @@ public class GlideBaseUseActivity extends AppCompatActivity {
     private ImageView mIv7;
     private ImageView mIv8;
     private ImageView mIv9;
+    private ImageView mIv10;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +50,7 @@ public class GlideBaseUseActivity extends AppCompatActivity {
         mIv7 = (ImageView) findViewById(R.id.iv7);
         mIv8 = (ImageView) findViewById(R.id.iv8);
         mIv9 = (ImageView) findViewById(R.id.iv9);
+        mIv10 = (ImageView) findViewById(R.id.iv10);
 
     }
 
@@ -110,5 +115,21 @@ public class GlideBaseUseActivity extends AppCompatActivity {
 
 
         Glide.with(this).load(Uri.fromFile(videoFile)).thumbnail(thumbnailRequest).centerCrop().placeholder(R.mipmap.pictures_no).into(mIv9);
+
+
+
+        //10 http://h.hiphotos.baidu.com/zhidao/pic/item/0eb30f2442a7d9334f268ca9a84bd11372f00159.jpg
+        String url10 = "http://h.hiphotos.baidu.com/zhidao/pic/item/0eb30f2442a7d9334f268ca9a84bd11372f00159.jpg";
+        Glide.with(this)
+                .load(url10)
+                .placeholder(R.mipmap.pictures_no)
+                .override(300,300)
+                .skipMemoryCache(true)   //跳过内存缓存，不在内存中保存图片
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .priority(Priority.HIGH)
+                .into(mIv10);
+
+
+
     }
 }
