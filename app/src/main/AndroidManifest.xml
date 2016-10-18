@@ -22,6 +22,8 @@
         <activity android:name=".ui.GlideBaseUseActivity"/>
         <activity android:name=".ui.GlideListUseActivity">
         </activity>
+        <activity android:name=".ui.TargetActivity">
+        </activity>
     </application>
 
 </manifest>

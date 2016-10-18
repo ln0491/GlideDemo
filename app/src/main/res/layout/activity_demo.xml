@@ -29,6 +29,11 @@
             android:text="ListView与加载失败和错误显示、默认显示"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btnTargetActivity"
+            android:text="TargetActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
     </LinearLayout>
 
