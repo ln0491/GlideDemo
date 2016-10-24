@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.liu.glidedemo.ui.GlideBaseUseActivity;
 import com.liu.glidedemo.ui.GlideListUseActivity;
+import com.liu.glidedemo.ui.NotiActivity;
 import com.liu.glidedemo.ui.TargetActivity;
 
 public class DemoActivity extends AppCompatActivity implements View.OnClickListener {
@@ -15,6 +16,7 @@ public class DemoActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnBaseUse;
     private Button mBtnListAndErrorUse;
     private Button mBtnTarget;
+    private Button mBtnExt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,7 @@ public class DemoActivity extends AppCompatActivity implements View.OnClickListe
         mBtnBaseUse = (Button) findViewById(R.id.btnBaseUse);
         mBtnListAndErrorUse = (Button) findViewById(R.id.btnListAndErrorUse);
         mBtnTarget = (Button) findViewById(R.id.btnTargetActivity);
+        mBtnExt = (Button) findViewById(R.id.btnExt);
 
 
     }
@@ -38,6 +41,7 @@ public class DemoActivity extends AppCompatActivity implements View.OnClickListe
         mBtnBaseUse.setOnClickListener(this);
         mBtnListAndErrorUse.setOnClickListener(this);
         mBtnTarget.setOnClickListener(this);
+        mBtnExt.setOnClickListener(this);
     }
 
     @Override
@@ -54,6 +58,10 @@ public class DemoActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnTargetActivity:
                 Intent target = new Intent(this, TargetActivity.class);
                 startActivity(target);
+                break;
+            case R.id.btnExt:
+                Intent btnExt = new Intent(this, NotiActivity.class);
+                startActivity(btnExt);
                 break;
         }
     }

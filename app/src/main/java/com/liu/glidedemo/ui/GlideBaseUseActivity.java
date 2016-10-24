@@ -58,6 +58,7 @@ public class GlideBaseUseActivity extends AppCompatActivity {
 
 
        Glide.with(this).load("http://img1.imgtn.bdimg.com/it/u=2615772929,948758168&fm=21&gp=0.jpg").into(mIv1);
+//       Glide.with(this).load("http://111img1.imgtn.bdimg.com/it/u=2615772929,948758168&fm=21&gp=0.jpg").into(mIv1);
 
 
         //加载资源
@@ -74,7 +75,7 @@ public class GlideBaseUseActivity extends AppCompatActivity {
         Uri uri = Uri.fromFile(file);
 
 
-       Glide.with(this).load(uri).into(mIv3);
+       Glide.with(this).load(uri).crossFade().into(mIv3);
 
         //加载网络gif
         String gifUrl = "http://b.hiphotos.baidu.com/zhidao/pic/item/faedab64034f78f066abccc57b310a55b3191c67.jpg";
